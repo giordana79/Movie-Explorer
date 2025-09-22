@@ -53,11 +53,13 @@ Cliccare su ❤ per aggiungere ai preferiti e verificare che compaia nella sezio
 E' possibile cambiare tema con il bottone (🌞/🌙) e ricaricare la pagina: il tema dovrebbe persistere.
 
 **---------------------------------------------------------------**
-**Test (api/tvmazeAdapter.test.js)**
+      **Test (api/tvmazeAdapter.test.js)**
 
 - npm test
 - npm test -- --watchAll
-  Esegue manualmente tutti i test senza watch mode,si utlizza questo comando quando Jest da errore. Jest gira in modalità watch mode e poichè per impostazione predefinita, esegue solo i test che riguardano i file modificati rispetto all’ultimo commit e se non sono stati modificati file con test associati, Jest dice “No tests found” perché non trova test “collegati” alle modifiche.
+  
+Esegue manualmente tutti i test senza watch mode,si utlizza questo comando quando Jest da errore. Jest gira in modalità watch mode e poichè per impostazione predefinita, esegue solo i test che riguardano i file modificati rispetto all’ultimo commit e se non sono stati modificati file con test associati, Jest dice “No tests found” perché non trova test “collegati” alle modifiche.
+
   
 Il test chiama https://api.tvmaze.com. Ciò significa che controlla se l’adapter (searchTitles, getTitleById) funziona.
 Utile per capire se ci sono errori di fetch, normalizzazione o se l’API ha cambiato risposta. Se l’API non risponde (es. offline, server giù), Jest (framework di testing per JS già integrato di default in create React App)segnala un errore in rosso; se l'API cambia formato (es. rimuove un campo) i test falliscono, altrimenti se è tutto ok segnala in verde.
